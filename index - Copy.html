@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMD FITNESS | Transform Yourself</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #101010;
+            color: white;
+        }
+
+        header {
+            background: #080808;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4500;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff4500;
+        }
+
+        .hero {
+            height: 90vh;
+            background:
+            linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.7)),
+            url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600')
+            center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 8%;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            max-width: 700px;
+        }
+
+        .hero h1 span {
+            color: #ff4500;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background: #ff4500;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+            width: fit-content;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #ff4500;
+        }
+
+        section {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: #ff4500;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #202020;
+            padding: 30px;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid #ff4500;
+        }
+
+        .card h3 {
+            color: #ff4500;
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .price {
+            font-size: 30px;
+            color: #ff4500;
+            margin: 20px 0;
+        }
+
+        .contact {
+            background: #1b1b1b;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: #303030;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: black;
+            text-align: center;
+            padding: 25px;
+            color: #aaa;
+        }
+
+        footer span {
+            color: #ff4500;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">KMD FITNESS</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Plans</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+
+<div class="hero" id="home">
+    <h1>BUILD YOUR <span>BODY</span><br>
+    BUILD YOUR FUTURE</h1>
+
+    <p>Train Hard. Stay Strong. Never Give Up.</p>
+
+    <a href="#plans" class="btn">JOIN KMD FITNESS</a>
+</div>
+
+<!-- ABOUT SECTION -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">ABOUT <span>US</span></h2>
+
+    <p>
+        Welcome to KMD FITNESS, where your fitness journey begins.
+        Our mission is to help you build strength, improve your health
+        and achieve your dream physique. We provide modern gym equipment,
+        professional training and a motivating environment.
+        Join us today and become the strongest version of yourself.
+    </p>
+
+</section>
+
+<!-- SERVICES SECTION -->
+
+<section id="services">
+
+    <h2 class="section-title">OUR <span>SERVICES</span></h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Weight Training</h3>
+            <p>Build muscles and increase your strength with our equipment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Personal Training</h3>
+            <p>Get professional guidance and personalized workout plans.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cardio Training</h3>
+            <p>Improve stamina, burn calories and keep your heart healthy.</p>
+        </div>
+
+        <div class="card">
+            <h3>Weight Loss</h3>
+            <p>Reach your fitness goals with structured training programs.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MEMBERSHIP SECTION -->
+
+<section id="plans">
+
+    <h2 class="section-title">MEMBERSHIP <span>PLANS</span></h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Monthly Plan</h3>
+            <div class="price">₹999</div>
+            <p>1 Month Membership</p>
+            <p>Gym Access</p>
+            <br>
+            <a href="#contact" class="btn">Join Now</a>
+        </div>
+
+        <div class="card">
+            <h3>Quarterly Plan</h3>
+            <div class="price">₹2499</div>
+            <p>3 Months Membership</p>
+            <p>Gym Access + Guidance</p>
+            <br>
+            <a href="#contact" class="btn">Join Now</a>
+        </div>
+
+        <div class="card">
+            <h3>Yearly Plan</h3>
+            <div class="price">₹7999</div>
+            <p>12 Months Membership</p>
+            <p>Gym Access + Training</p>
+            <br>
+            <a href="#contact" class="btn">Join Now</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">JOIN <span>US TODAY</span></h2>
+
+    <form id="contactForm">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <input type="tel" placeholder="Phone Number" required>
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+
+    </form>
+
+    <p id="message" style="margin-top:20px;color:#ff4500;"></p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 <span>KMD FITNESS</span>. All Rights Reserved.</p>
+    <p>Train Hard | Stay Strong | Live Healthy</p>
+</footer>
+
+<script>
+    document.getElementById("contactForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("message").innerText =
+        "Thank you for contacting KMD FITNESS!";
+
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
